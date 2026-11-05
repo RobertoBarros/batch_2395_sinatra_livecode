@@ -1,0 +1,16 @@
+<h1>My Restaurant App</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="/restaurants/<%= restaurant.id %>">
+        <%= restaurant.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+<h2>Add a new restaurant</h2>
+<form action="/restaurants" method="post">
+  <input type="text" name="name" placeholder="Restaurant Name">
+  <input type="text" name="city" placeholder="City">
+  <input type="submit">
+</form>
